@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!--
+        1 способ: будем использовать
+        подключать скрипт нужно внутри <head> + обязательно использовать defer
+        defer "сообщит" браузеру, чтобы JS выполни после загрузки страницы
+    --> 
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+    <h1>Привет :)</h1>
+
+    <!--
+        2 способ: ранее использовали
+        подключать скрипт нужно перед закрывающимся /body
+        чтобы страница html полностью прогрузилась
+    --> 
+
+    <script src="js/index.js"></script>
+
+    <script>
+    /*
+        код на JS можно писать и здесь - между тегами script,
+        но это считается устаравшей практикой
+    */
+    </script>
+</body>
+</html>

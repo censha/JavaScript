@@ -1,0 +1,15 @@
+button {
+  width: 100%;
+}
+
+.dark{
+  background-color: black;
+}
+
+.container{
+  transition: 2s;
+}
+
+#lamp{
+  transition: 2s;
+}

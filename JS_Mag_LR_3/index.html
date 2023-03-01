@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Киноха</title>
+    <meta charset="UTF-8" />
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+            crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+<div class="container vh-100" id="page">
+    <div class="row justify-content-center">
+        <div class="col-8 justify-content-center">
+            <div class="row mt-3">
+                <div id="date" class="col-3">
+                    <p>Расписание сеансов</p>
+                    <select name="date">
+                        <option value="">Выбирете дату</option>
+                        <option value="27">27 февраля</option3>
+                        <option value="28">28 февраля</option>
+                        <option value="01">1 марта</option>
+                    </select>
+                </div>
+                <p class="mt-3">места на выбор</p>
+                <div id="film" style="display: none" class="col-3">
+                    <select name="film">
+                        <option value="">Выбирете фильм</option>
+                        <option value="1">Фильм 1</option>
+                        <option value="2">Фильм 2</option>
+                        <option value="3">Фильм 3</option>
+                    </select>
+                </div>
+                <div id="time" style="display: none" class="col-3">
+                    <select name="time">
+                        <option value="">Выбирете время</option>
+                        <option value="1">11:30</option>
+                        <option value="2">16:10</option>
+                        <option value="3">21:30</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-8">
+                   <span id="description"></span>
+                </div>
+                <div class="col-6">
+                    <p>1 ряд</p>
+                </div>
+                <div class="col">
+                    <button id="1" name="place" type="button" class="btn btn-secondary" >
+                        1
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="2" name="place" type="button" class="btn btn-secondary">
+                        2
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="3" name="place" type="button" class="btn btn-secondary">
+                        3
+                    </button>
+                </div>
+                <div class="col-3">
+                    <button id="4" name="place" type="button" class="btn btn-secondary">
+                        4
+                    </button>
+                </div>
+                <div class="col-6">
+                    <p>2 ряд</p>
+                </div>
+
+                <div class="col">
+                    <button id="5" name="place" type="button" class="btn btn-secondary">
+                        1
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="6" name="place" type="button" class="btn btn-secondary">
+                        2
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="7" name="place" type="button" class="btn btn-secondary">
+                        3
+                    </button>
+                </div>
+                <div class="col-3">
+                    <button id="8" name="place" type="button" class="btn btn-secondary">
+                        4
+                    </button>
+                </div>
+                <div class="col-6">
+                    <p>3 ряд</p>
+                </div>
+                <div class="col">
+                <button id="9" name="place" type="button" class="btn btn-secondary">
+                    1
+                </button>
+            </div>
+                <div class="col">
+                    <button id="10" name="place" type="button" class="btn btn-secondary">
+                        2
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="11" name="place" type="button" class="btn btn-secondary">
+                        3
+                    </button>
+                </div>
+                    <div class="col-3">
+                        <button id="12" name="place" type="button" class="btn btn-secondary">
+                            4
+                        </button>
+                    </div>
+            </div>
+            <div class="mt-3 row justify-content-between">
+                <div class="col-4">
+                    <button id="choice" type="button" class="btn btn-primary">
+                        Выбрать
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button id="del" type="button" class="btn btn-primary ">
+                        Удалить
+                    </button>
+                </div>
+                <span class="m-3" id="amount"></span>
+            </div>
+                    <div class="container" id="choice_btn">
+                        <div class="row justify-content-md-center ">
+                            <div class="col-auto p-0">
+                                <button class="btn btn-primary" id="booking" type="button">
+                                    Форма бронирования
+                                </button>
+                            </div>
+                            <div class="col-auto p-0">
+                                <button class="btn btn-primary" id="payment" type="button" >
+                                    Форма оплаты
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                <div id="form_booking" class="form mt-5">
+                    <div class="row mt-2">
+                        <label class="col-3" >Номер телефона</label>
+                        <input class="col" type="tel" placeholder="+79999999999" id="number">
+                        <span id="number_span"></span>
+                    </div>
+                    <div class="row mt-2">
+                        <label class="col-3">Email</label>
+                        <input class="col" type="email" placeholder="info@kino.com"  id="email">
+                        <span id="email_span"></span>
+                    </div>
+                    <div class="row mt-2">
+                        <label class="col-3"> Сумма к оплате</label>
+                        <span class="col" id="amount_final"></span>
+                    </div>
+                    <button class="btn btn-primary mt-3" id="book">Забронировать</button>
+                </div>
+                <div id="form_payment" class="form mt-5">
+                    <div  class="row mt-2">
+                        <label  class="col-3"> Номер карты</label>
+                        <input  class="col" type="text" maxlength="16">
+                    </div>
+                    <div  class="row mt-2">
+                        <label  class="col-3">Имя пользователя</label>
+                        <input class="col" type="text" >
+                    </div>
+                    <div  class="row mt-2">
+                        <label  class="col-3">CVC2</label>
+                        <input class="col" type="text" maxlength="3">
+                    </div>
+                    <button class="btn btn-primary mt-3" id="buy">Купить</button>
+                </div>
+
+                <div class="col-12">
+                    <h3 id="result"></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
